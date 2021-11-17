@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>SpaceX Launch Program</h2>
+    <div class="search-filter-cnt">
+      <h3>Filter</h3>
+      <div class="years-cnt">
+        <button type="button" class="btn btn-success" (click)="sendYear(year)" *ngFor="let year of years">{{year}}</button>
+      </div>
+    </div>
+    <div class="rocket-result-cnt">
+      <div class="rocket-card" *ngFor="let rocket of rockets">
+        <!-- <div>{{rocket | json}}</div> -->
+        <div class="card">
+          <div class="card-header">
+            <img src={{rocket.links.mission_patch}} width="100" height="100">
+          </div>
+          <div class="card-body">
+            <b>{{rocket.mission_name}} #{{rocket.flight_number}}</b>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

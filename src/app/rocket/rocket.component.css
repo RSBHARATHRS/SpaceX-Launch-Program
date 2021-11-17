@@ -1,0 +1,32 @@
+.search-filter-cnt {
+  width: 20%;
+  min-width: 150px;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  float: left;
+}
+
+.btn {
+  padding: 10px;
+  margin: 10px;
+}
+
+/**Rocket Result Container**/
+
+.rocket-result-cnt {
+  width: 80%;
+  min-width: 40%;
+  border: 1px solid gray;
+  float: right;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Card*/
+
+.card {
+  width: 300px;
+}
