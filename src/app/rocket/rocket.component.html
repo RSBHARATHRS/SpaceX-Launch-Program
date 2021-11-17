@@ -1,22 +1,55 @@
-<div class="container">
+<div class="container  bg-color">
+
+
+<div>
   <h2>SpaceX Launch Program</h2>
     <div class="search-filter-cnt">
       <h3>Filter</h3>
+
       <div class="years-cnt">
-        <button type="button" class="btn btn-success" (click)="sendYear(year)" *ngFor="let year of years">{{year}}</button>
+        <h4>Launch Year</h4>
+        <hr>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':yearBtnClick[year - 2006]}" (click)="yearFilter(year)" *ngFor="let year of years">{{year}}</button>
       </div>
+
+      <div class="years-cnt">
+        <h4>Successful Launch</h4>
+        <hr>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':succLanchClick}"(click)="launchSuccessFilter('true')">True</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':succLanchClick}" (click)="launchSuccessFilter('false')">False</button>
+      </div>
+
+      <div class="years-cnt">
+        <h4>Successful Landing</h4>
+        <hr>
+        <button type="button" class="btn btn-success" (click)="landSuccessFilter('true')">True</button>
+        <button type="button" class="btn btn-success" (click)="landSuccessFilter('false')">False</button>
+      </div>
+
     </div>
+
+
     <div class="rocket-result-cnt">
+      <!------------ROcket Card----------------->
       <div class="rocket-card" *ngFor="let rocket of rockets">
         <!-- <div>{{rocket | json}}</div> -->
         <div class="card">
           <div class="card-header">
-            <img src={{rocket.links.mission_patch}} width="100" height="100">
+            <img src={{rocket.links.mission_patch}} width="120" height="120">
           </div>
+          <hr>
           <div class="card-body">
-            <b>{{rocket.mission_name}} #{{rocket.flight_number}}</b>
+            <b class="card-title">{{rocket.mission_name}} #{{rocket.flight_number}}</b><br><br>
+            <b> Mission Ids:</b> {{rocket.mission_id[0]}}<br>
+            <b> Launch Year:</b> {{rocket.launch_year}}<br>
+            <b> Successful Launch:</b> {{rocket.launch_success}}<br>
+            <b> Successfull Landing :</b> {{rocket.rocket.first_stage.cores[0].land_success}}
           </div>
         </div>
       </div>
+      <!--------------------------------------->
     </div>
+</div>
+<div class="clr"></div>
+<div class="developer-cnt">Developed By : {{developerName}}</div>
 </div>

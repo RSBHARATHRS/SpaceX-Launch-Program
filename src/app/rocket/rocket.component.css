@@ -1,32 +1,85 @@
+.container {
+}
+
+.bg-color {
+  background-color: #f2f2f2;
+}
+
 .search-filter-cnt {
-  width: 20%;
+  width: 14%;
   min-width: 150px;
-  border: 1px solid gray;
+  max-width: 280px;
+  border-radius: 6px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   float: left;
+  background-color: #fff;
+  margin: 0 8px;
+  padding: 10px;
+}
+
+.years-cnt {
 }
 
 .btn {
   padding: 10px;
   margin: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.4s ease;
+}
+
+.btn-active {
+  background-color: green;
+}
+
+.btn:hover {
+  background-color: green;
 }
 
 /**Rocket Result Container**/
+.rocket-card {
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  margin: 6px;
+  border-radius: 8px;
+  text-align: justify;
+  transition: all 0.4s ease;
+}
+
+.rocket-card:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 8px 2px gray;
+}
 
 .rocket-result-cnt {
-  width: 80%;
-  min-width: 40%;
-  border: 1px solid gray;
-  float: right;
+  width: 84%;
+  min-width: 200px;
 
+  float: left;
+  background-color: #f2f2f2;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 /*Card*/
 
 .card {
-  width: 300px;
+}
+
+.card-header {
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.card-title{
+  color: rgb(8, 8, 131);
+}
+/**Developer**/
+.developer-cnt {
+  text-align: center;
+  padding: 10px;
 }
