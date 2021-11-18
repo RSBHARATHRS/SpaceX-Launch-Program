@@ -16,15 +16,15 @@
       <div class="years-cnt">
         <h4>Successful Launch</h4>
         <hr>
-        <button type="button" [ngClass]="{'btn':true}" (click)="launchSuccessFilter('true')">True</button>
-        <button type="button" [ngClass]="{'btn':true}" (click)="launchSuccessFilter('false')">False</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':launchSuccSeleArr[0]}" (click)="launchSuccessFilter('true')">True</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':launchSuccSeleArr[1]}" (click)="launchSuccessFilter('false')">False</button>
       </div>
 
       <div class="years-cnt">
         <h4>Successful Landing</h4>
         <hr>
-        <button type="button" class="btn btn-success" (click)="landSuccessFilter('true')">True</button>
-        <button type="button" class="btn btn-success" (click)="landSuccessFilter('false')">False</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':landSuccSeleArr[0]}" (click)="landSuccessFilter('true')">True</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':landSuccSeleArr[1]}" (click)="landSuccessFilter('false')">False</button>
       </div>
 
     </div>

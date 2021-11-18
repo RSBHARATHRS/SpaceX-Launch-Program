@@ -27,4 +27,8 @@ export class SpaceXService {
   filterBySuccLand(succLand:any):Observable<any>{
     return this.http.get<any>("https://api.spacexdata.com/v3/launches?limit=100&land_success="+succLand);
   }
+
+  filterByStrQuery(queryStr:any){
+    return this.http.get<any>("https://api.spacexdata.com/v3/launches?limit=100&"+queryStr);
+  }
 }
