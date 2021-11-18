@@ -1,9 +1,9 @@
-<div class="container  bg-color">
+<div class="container  bg-colo">
 
 
-<div>
+<div class="row">
   <h2>SpaceX Launch Program</h2>
-    <div class="search-filter-cnt">
+    <div class="search-filter-cnt col-2">
       <h3>Filter</h3>
 
       <div class="years-cnt">
@@ -29,7 +29,7 @@
     </div>
 
 
-    <div class="rocket-result-cnt">
+    <div class="rocket-result-cnt col-10">
       <!------------ROcket Card----------------->
       <div class="rocket-card" *ngFor="let rocket of rockets">
         <!-- <div>{{rocket | json}}</div> -->
@@ -50,6 +50,5 @@
       <!--------------------------------------->
     </div>
 </div>
-<div class="clr"></div>
 <div class="developer-cnt">Developed By : {{developerName}}</div>
 </div>

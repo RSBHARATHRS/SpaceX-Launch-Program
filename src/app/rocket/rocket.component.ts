@@ -22,7 +22,7 @@ export class RocketComponent implements OnInit {
     this.developerName = "Bharath";
     this.previousSelectedYearBtn = 0;
     this.yearBtnClick = [false, false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
-    this.succLanchClick = true;
+    this.succLanchClick = false;
   }
 
   ngOnInit(): void {
