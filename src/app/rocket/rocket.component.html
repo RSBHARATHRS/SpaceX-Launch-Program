@@ -9,14 +9,15 @@
       <div class="years-cnt">
         <h4>Launch Year</h4>
         <hr>
-        <button type="button" [ngClass]="{'btn':true, 'btn-active':yearBtnClick[year - 2006]}" (click)="yearFilter(year)" *ngFor="let year of years">{{year}}</button>
+        <button type="button" [ngClass]="{'btn':true, 'btn-active':yearBtnClick[year - 2006]}"
+          (click)="yearFilter(year)" *ngFor="let year of years">{{year}}</button>
       </div>
 
       <div class="years-cnt">
         <h4>Successful Launch</h4>
         <hr>
-        <button type="button" [ngClass]="{'btn':true, 'btn-active':succLanchClick}"(click)="launchSuccessFilter('true')">True</button>
-        <button type="button" [ngClass]="{'btn':true, 'btn-active':succLanchClick}" (click)="launchSuccessFilter('false')">False</button>
+        <button type="button" [ngClass]="{'btn':true}" (click)="launchSuccessFilter('true')">True</button>
+        <button type="button" [ngClass]="{'btn':true}" (click)="launchSuccessFilter('false')">False</button>
       </div>
 
       <div class="years-cnt">

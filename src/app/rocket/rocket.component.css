@@ -25,6 +25,10 @@
   }
 }
 
+.sub-heading {
+  padding: 10px;
+}
+
 .search-filter-cnt {
   border-radius: 6px;
   display: flex;
